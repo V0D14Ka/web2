@@ -1,4 +1,39 @@
 
-.col-8 {
-    color: blue;
+body {
+    background-color: cyan;
+    font-family: 'Courier New', Courier, monospace;
+    color: purple;
+}
+
+.bar-logo{
+    background: url(../static/logo.webp) no-repeat center center;
+    background-size: 100%;
+    width: 75px;
+    height: 75px;
+}
+
+.my-photo {
+    background: url(../static/cat1.jpeg) no-repeat center center;
+    background-size: 70%;
+    width: 440px;
+    height: 300px;
+}
+
+.bar-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.container {
+    margin: auto;
+    padding: 30px;
+}
+
+.title-photo {
+    text-align: center;
+    font-size: 25px;
 }
