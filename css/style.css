@@ -37,3 +37,24 @@ body {
     text-align: center;
     font-size: 25px;
 }
+
+#myButton {
+    border: none;
+    width: 300px;
+    height: 80px;
+    border-radius: 44px;
+    font-size: 20px;
+    background-color: blueviolet;
+    color: cyan;
+    font-weight: bold;
+}
+
+.button-js {
+    text-align: center;
+}
+
+.img1 {
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+}
