@@ -13,11 +13,11 @@
 <body>
     <div class="container">
         <div class="col-12 index">
-            <h1> Авторизируйтесь </h1>
+            <h1> Войдите </h1>
             <?php
             if(!isset($_COOKIE['User'])) {
                 ?>
-                <a href='/registration.php'> Пожалуйста зарегистрируйтесь !</a> or <a href="/login.php"> Или авторизируйтесь</a>
+                <a href='/registration.php'> Пожалуйста зарегистрируйтесь</a> или <a href="/login.php"> авторизируйтесь. </a>
                 <?php 
             } else {
                 //some code
