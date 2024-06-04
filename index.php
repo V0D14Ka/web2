@@ -11,15 +11,20 @@
 </head>
 
 <body>
-    <?php
-    if(!isset($_COOKIE['User'])) {
-        ?>
-        <a href='/registration.php'> Пожалуйста зарегистрируйтесь !</a> or <a href="/login.php"> Или авторизируйтесь</a>
-        <?php 
-    } else {
-        //some code
-    }
-    ?>
+    <div class="container">
+        <div class="col-12 index">
+            <h1> Авторизируйтесь </h1>
+            <?php
+            if(!isset($_COOKIE['User'])) {
+                ?>
+                <a href='/registration.php'> Пожалуйста зарегистрируйтесь !</a> or <a href="/login.php"> Или авторизируйтесь</a>
+                <?php 
+            } else {
+                //some code
+            }
+            ?>
+        </div>
+    </div>
 </body>
 
 </html>
