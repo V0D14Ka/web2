@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div class="col-12 index">
-            <h1> Войдите </h1>
+            <h1> Страница постов </h1>
             <?php
             if(!isset($_COOKIE['User'])) {
                 ?>
