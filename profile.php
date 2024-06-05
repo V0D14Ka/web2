@@ -49,7 +49,7 @@
         <div class="row">
             <div class="col-12">
                 <form action="profile.php" method="POST">
-                    <div class="row form-reg"><input type="text" class="form" name="title" placeholder="Title" ></div>
+                    <input type="text" class="form" name="title" placeholder="Title" >
                     <textarea name="text" cols="30" rows="10" placeholder="Content"></textarea>
                     <button type="submit" class="btn_post" name="submit">Создать пост</button>
                 </form>
@@ -62,5 +62,17 @@
 </html>
 
 <?php
+if (isset($_POST["submit"])) {
+    $title = $_POST["title"];
+    $content = $_POST["content"];
+    if (!$title || !$content) {
+        die("Please enter correct data");
+    } else {
+        $sql = "insert into posts (title, content) values ('$title','$content')";
+    }
+}
+
+
+
 
 ?>
