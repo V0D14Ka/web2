@@ -50,7 +50,7 @@
             <div class="col-12">
                 <form action="profile.php" method="POST">
                     <input type="text" class="form" name="title" placeholder="Title" >
-                    <textarea name="text" cols="30" rows="10" placeholder="Content"></textarea>
+                    <textarea name="content" cols="30" rows="10" placeholder="Content"></textarea>
                     <button type="submit" class="btn_post" name="submit">Создать пост</button>
                 </form>
             </div>
