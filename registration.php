@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12 form_align">
+            <div class="col-12 form-align">
                 <h1>Регистрация </h1>
             </div>
         </div>
