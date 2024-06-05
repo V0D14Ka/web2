@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 form_align">
                 <h1>Авторизация</h1>
             </div>
         </div>
