@@ -42,7 +42,7 @@ if (isset($_POST["submit"])) {
     if (!$password || !$login) {
         die("Please enter correct data");
     }
-    $sql = "select * from users where username='$login' and pass='$password";
+    $sql = "select * from users where username='$login' and pass='$password'";
     $result = mysqli_query($link, $sql);
     if (mysqli_num_rows($result) == 1) {
         setcookie("User", $login, time() + 7200,"/");
