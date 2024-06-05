@@ -44,7 +44,7 @@ if (isset($_POST["submit"])) {
     if (!$email || !$password || !$login) {
         die("Please enter correct data");
     }
-    $sql = "insert into users (email, username, pass) values ('$email', '$username', '$password')";
+    $sql = "insert into users (email, username, pass) values ('$email', '$login', '$password')";
 
     if (mysqli_query( $link, $sql)) {
         echo "Can't add user";
