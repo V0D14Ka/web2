@@ -10,7 +10,7 @@ if (!$link) {
     die('Error via connect: '. mysqli_connect_error());
 }
 
-$sql = "CREATE DATABASE IF NO EXISTS $dbname";
+$sql = "CREATE DATABASE IF NOT EXISTS $dbname";
 
 if (!mysqli_query($link, $sql)) {
     echo("Error via creating table");
