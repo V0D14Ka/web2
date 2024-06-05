@@ -20,9 +20,10 @@
         <div class="row">
             <div class="col-12">
                 <form action="registation.php" method="POST">
-                    <div class="row form-reg"><input type="email" class="form" name="Email"></div>
-                    <div class="row form-reg"><input type="text" class="form" name="Login"></div>
-                    <div class="row form-reg"><input type="password" class="form" name="Password"></div>
+                    <div class="row form-reg"><input type="email" class="form" name="email" placeholder="Email"></div>
+                    <div class="row form-reg"><input type="text" class="form" name="login" placeholder="Login" ></div>
+                    <div class="row form-reg"><input type="password" class="form" name="password" placeholder="Password"></div>
+                    <button type="submit" class="btn_reg" name="submit">Зарегистрироваться</button>
                 </form>
             </div>
         </div>
