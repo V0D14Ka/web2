@@ -1,6 +1,6 @@
 <?php
 if (!isset($_COOKIE['User'])) {
-    header('Location: index.php');
+    header('Location: /');
 }
 ?>
 <!DOCTYPE html>
@@ -53,7 +53,7 @@ if (!isset($_COOKIE['User'])) {
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <form action="profile.php" class="form-align" method="POST">
+                <form action="profile.php" class="form-align" method="POST" enctype="multipart/form-data">
                     <input type="text" class="form form-width" name="title" placeholder="Title" ><br>
                     <textarea name="content" class="form-width" cols="30" rows="10" placeholder="Content"></textarea><br>
                     <input type="file" class="form padding-bot-10" name="file" placeholder><br>
