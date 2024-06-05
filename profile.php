@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col-3 bar-logo"></div>
-            <div class="col-9 bar-text"> About cats. </div>
+            <div class="col-9 bar-text"> Привет <?php echo $_COOKIE['User'];?>! </div>
         </div>
     </div>
     <div class="container">
@@ -45,7 +45,45 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="profile.php" method="POST">
+                    <div class="row form-reg"><input type="text" class="form" name="title" placeholder="Title" ></div>
+                    <textarea name="text" cols="30" rows="10" placeholder="Content"></textarea>
+                    <button type="submit" class="btn_post" name="submit">Создать пост</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="js/button.js"></script>
 </body>
 
 </html>
+
+<?php
+require_once "db.php";
+
+if (isset($_COOKIE['User'])) {
+    header('Location: profile.php');
+}
+$link = mysqli_connect("127.0.0.1","root","root","web2");
+
+if (isset($_POST["submit"])) {
+    $password = $_POST["password"];
+    $login = $_POST["login"];
+
+    if (!$password || !$login) {
+        die("Please enter correct data");
+    }
+    $sql = "select * from users where username='$login' and pass='$password'";
+    $result = mysqli_query($link, $sql);
+    if (mysqli_num_rows($result) == 1) {
+        setcookie("User", $login, time() + 7200,"/");
+        header("Location: profile.php");
+    } else {
+        echo "Incorrect user data";
+    }
+}
+
+?>

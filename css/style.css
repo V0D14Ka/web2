@@ -58,3 +58,14 @@ body {
     height: 300px;
     margin-top: 20px;
 }
+
+.btn_post {
+    border: none;
+    width: 300px;
+    height: 80px;
+    border-radius: 44px;
+    font-size: 20px;
+    background-color: blueviolet;
+    color: cyan;
+    font-weight: bold;
+}
