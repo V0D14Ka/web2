@@ -21,7 +21,7 @@ mysqli_close($link);
 $link = mysqli_connect($servername, $username, $password, $dbname);
 $sql = "CREATE TABLE IF NOT EXISTS users(
     id int not null primary key auto_increment,
-    username varchar(15) not null,
+    username varchar(15) not null unique,
     email varchar(30) not null,
     pass varchar(30) not null)";
 

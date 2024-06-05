@@ -14,16 +14,15 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>Регистрация </h1>
+                <h1>Авторизация</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <form action="registration.php" method="POST">
-                    <div class="row form-reg"><input type="email" class="form" name="email" placeholder="Email"></div>
+                <form action="login.php" method="POST">
                     <div class="row form-reg"><input type="text" class="form" name="login" placeholder="Login" ></div>
                     <div class="row form-reg"><input type="password" class="form" name="password" placeholder="Password"></div>
-                    <button type="submit" class="btn_reg" name="submit">Зарегистрироваться</button>
+                    <button type="submit" class="btn_reg" name="submit">Войти</button>
                 </form>
             </div>
         </div>
@@ -37,17 +36,19 @@ require_once "db.php";
 $link = mysqli_connect("127.0.0.1","root","root","web2");
 
 if (isset($_POST["submit"])) {
-    $email = $_POST["email"];
     $password = $_POST["password"];
     $login = $_POST["login"];
 
-    if (!$email || !$password || !$login) {
+    if (!$password || !$login) {
         die("Please enter correct data");
     }
-    $sql = "insert into users (email, username, pass) values ('$email', '$login', '$password')";
-
-    if (!mysqli_query( $link, $sql)) {
-        echo "Can't add user";
+    $sql = "select * from users where username='$login' and pass='$password";
+    $result = mysqli_query($link, $sql);
+    if (mysqli_num_rows($result) == 1) {
+        setcookie("User", $login, time() + 7200,"/");
+        header("Location: profile.php");
+    } else {
+        echo "Incorrect user data";
     }
 }
 
