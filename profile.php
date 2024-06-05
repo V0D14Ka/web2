@@ -62,14 +62,20 @@
 </html>
 
 <?php
+$link = mysqli_connect("127.0.0.1","root","root","web2");
+
 if (isset($_POST["submit"])) {
     $title = $_POST["title"];
     $content = $_POST["content"];
     if (!$title || !$content) {
         die("Please enter correct data");
-    } else {
-        $sql = "insert into posts (title, content) values ('$title','$content')";
+    } 
+    
+    $sql = "insert into posts (title, content) values ('$title','$content')";
+    if(!mysqli_query($link, $sql)) {
+        die("Unable to add post");
     }
+    
 }
 
 
