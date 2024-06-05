@@ -49,8 +49,9 @@
         <div class="row">
             <div class="col-12">
                 <form action="profile.php" method="POST">
-                    <input type="text" class="form" name="title" placeholder="Title" >
-                    <textarea name="content" cols="30" rows="10" placeholder="Content"></textarea>
+                    <input type="text" class="form" name="title" placeholder="Title" ><br>
+                    <textarea name="content" cols="30" rows="10" placeholder="Content"></textarea><br>
+                    <input type="file" class="form" name="file" placeholder><br>
                     <button type="submit" class="btn_post" name="submit">Создать пост</button>
                 </form>
             </div>
@@ -74,6 +75,17 @@ if (isset($_POST["submit"])) {
     $sql = "insert into posts (title, content) values ('$title','$content')";
     if(!mysqli_query($link, $sql)) {
         die("Unable to add post");
+    }
+    if(!empty($_FILES['file'])) {
+        if (@$_FILES['file']['type'] == 'image/gif' || @$_FILES['file']['type'] == 'image/jpeg' || @$_FILES['file']['type'] == 'image/png' 
+        || @$_FILES['file']['type'] == 'image/jpg' || @$_FILES['file']['type'] == 'image/x-png' && $_FILES['file']['size'] < 102400) {
+            move_uploaded_file(@$_FILES['file']['tmp_name'], 'upload/' . $_FILES['file']['name']);
+            echo 'Load in: upload/' . $_FILES['file']['name'];
+        } else {
+            echo "Incorrect type or size";
+        }
+    } else {
+        echo "Nothing to upload.";
     }
     
 }
