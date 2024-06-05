@@ -62,28 +62,5 @@
 </html>
 
 <?php
-require_once "db.php";
-
-if (isset($_COOKIE['User'])) {
-    header('Location: profile.php');
-}
-$link = mysqli_connect("127.0.0.1","root","root","web2");
-
-if (isset($_POST["submit"])) {
-    $password = $_POST["password"];
-    $login = $_POST["login"];
-
-    if (!$password || !$login) {
-        die("Please enter correct data");
-    }
-    $sql = "select * from users where username='$login' and pass='$password'";
-    $result = mysqli_query($link, $sql);
-    if (mysqli_num_rows($result) == 1) {
-        setcookie("User", $login, time() + 7200,"/");
-        header("Location: profile.php");
-    } else {
-        echo "Incorrect user data";
-    }
-}
 
 ?>
