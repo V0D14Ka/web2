@@ -1,3 +1,8 @@
+<?php
+if (!isset($_COOKIE['User'])) {
+    header('Location: index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
