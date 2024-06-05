@@ -34,7 +34,13 @@
 
 <?php
 require_once "db.php";
+
+if (isset($_COOKIE['User'])) {
+    header('Location: index.php');
+}
+
 $link = mysqli_connect("127.0.0.1","root","root","web2");
+
 
 if (isset($_POST["submit"])) {
     $email = $_POST["email"];

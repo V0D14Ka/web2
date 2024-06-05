@@ -20,7 +20,7 @@
                 <a href='/registration.php'> Пожалуйста зарегистрируйтесь</a> или <a href="/login.php"> авторизируйтесь. </a>
                 <?php 
             } else {
-                //some code
+                header('Location: profile.php');
             }
             ?>
         </div>
