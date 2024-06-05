@@ -54,6 +54,8 @@ if (isset($_POST["submit"])) {
 
     if (!mysqli_query( $link, $sql)) {
         echo "Can't add user";
+    } else {
+        header('Location: login.php');
     }
 }
 
