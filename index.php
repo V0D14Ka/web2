@@ -20,7 +20,14 @@
                 <a href='/registration.php'> Пожалуйста зарегистрируйтесь</a> или <a href="/login.php"> авторизируйтесь. </a>
                 <?php 
             } else {
-                header('Location: profile.php');
+                $link = mysqli_connect("127.0.0.1","root","root","web2");
+                $sql = "select * from posts";
+                $res = mysqli_query($link, $sql);
+                if (mysqli_num_rows($res) > 0) {
+                    while ($post = mysqli_fetch_array($res)) {
+                        echo "<a href='/posts.php?id=" . $post["id"] ."'>". $post["title"] . "</a><br>";
+                    }
+                }
             }
             ?>
         </div>
