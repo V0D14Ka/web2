@@ -17,7 +17,7 @@
             <?php
             if(!isset($_COOKIE['User'])) {
                 ?>
-                <a href='/registration.php'> Пожалуйста зарегистрируйтесь</a> или <a href="/login.php"> авторизируйтесь. </a>
+                Пожалуйста <a href='/registration.php'> зарегистрируйтесь</a> или <a href="/login.php"> авторизируйтесь. </a>
                 <?php 
             } else {
                 $link = mysqli_connect("127.0.0.1","root","root","web2");
