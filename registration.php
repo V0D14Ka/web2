@@ -19,7 +19,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <form action="registration.php" method="POST">
+                <form action="registration.php form-align" method="POST">
                     <div class="row form-reg"><input type="email" class="form" name="email" placeholder="Email"></div>
                     <div class="row form-reg"><input type="text" class="form" name="login" placeholder="Login" ></div>
                     <div class="row form-reg"><input type="password" class="form" name="password" placeholder="Password"></div>

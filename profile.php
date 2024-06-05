@@ -51,7 +51,7 @@
                 <form action="profile.php" class="form-align" method="POST">
                     <input type="text" class="form form-width" name="title" placeholder="Title" ><br>
                     <textarea name="content" class="form-width" cols="30" rows="10" placeholder="Content"></textarea><br>
-                    <input type="file" class="form" name="file" placeholder><br>
+                    <input type="file" class="form padding-bot-10" name="file" placeholder><br>
                     <button type="submit" class="btn_post" name="submit">Создать пост</button>
                 </form>
             </div>
