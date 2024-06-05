@@ -13,13 +13,13 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12 form_align">
+            <div class="col-12 form-align">
                 <h1>Авторизация</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <form action="login.php" class="form_align" method="POST">
+                <form action="login.php" class="form-align" method="POST">
                     <div class="row form-reg"><input type="text" class="form" name="login" placeholder="Login" ></div>
                     <div class="row form-reg"><input type="password" class="form" name="password" placeholder="Password"></div>
                     <button type="submit" class="btn_post" name="submit">Войти</button>
