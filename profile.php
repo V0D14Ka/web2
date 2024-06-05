@@ -48,9 +48,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <form action="profile.php" method="POST">
-                    <input type="text" class="form" name="title" placeholder="Title" ><br>
-                    <textarea name="content" cols="30" rows="10" placeholder="Content"></textarea><br>
+                <form action="profile.php" class="form_align" method="POST">
+                    <input type="text" class="form form_width" name="title" placeholder="Title" ><br>
+                    <textarea name="content" class="form_width" cols="30" rows="10" placeholder="Content"></textarea><br>
                     <input type="file" class="form" name="file" placeholder><br>
                     <button type="submit" class="btn_post" name="submit">Создать пост</button>
                 </form>

@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 form_align">
                 <h1>Регистрация </h1>
             </div>
         </div>
@@ -23,7 +23,7 @@
                     <div class="row form-reg"><input type="email" class="form" name="email" placeholder="Email"></div>
                     <div class="row form-reg"><input type="text" class="form" name="login" placeholder="Login" ></div>
                     <div class="row form-reg"><input type="password" class="form" name="password" placeholder="Password"></div>
-                    <button type="submit" class="btn_reg" name="submit">Зарегистрироваться</button>
+                    <button type="submit" class="btn_post" name="submit">Зарегистрироваться</button>
                 </form>
             </div>
         </div>

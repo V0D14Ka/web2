@@ -69,3 +69,18 @@ body {
     color: cyan;
     font-weight: bold;
 }
+
+.form-width {
+    width: 100%;
+}
+
+.form-align {
+    text-align: center;
+}
+
+.form_reg {
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 40%;
+}
