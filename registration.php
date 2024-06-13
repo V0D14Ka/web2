@@ -39,7 +39,7 @@ if (isset($_COOKIE['User'])) {
     header('Location: index.php');
 }
 
-$link = mysqli_connect("127.0.0.1","root","root","web2");
+$link = mysqli_connect("db","root","root","web2");
 
 
 if (isset($_POST["submit"])) {

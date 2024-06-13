@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php 
-    $link = mysqli_connect("127.0.0.1","root","root","web2");
+    $link = mysqli_connect("db","root","root","web2");
     $id = $_GET['id'];
     $sql = "select * from posts where id=$id";
     $res = mysqli_query($link, $sql);

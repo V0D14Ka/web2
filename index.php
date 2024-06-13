@@ -20,7 +20,7 @@
                 Пожалуйста <a href='/registration.php'> зарегистрируйтесь</a> или <a href="/login.php"> авторизируйтесь. </a>
                 <?php 
             } else {
-                $link = mysqli_connect("127.0.0.1","root","root","web2");
+                $link = mysqli_connect("db","root","root","web2");
                 $sql = "select * from posts";
                 $res = mysqli_query($link, $sql);
                 if (mysqli_num_rows($res) > 0) {
